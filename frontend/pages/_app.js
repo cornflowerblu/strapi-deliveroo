@@ -16,10 +16,8 @@ class MyApp extends App {
   render() {
     const { Component, pageProps, isAuthenticated, ctx } = this.props;
     return (
-      <Container>
-        <Layout {...pageProps}>
+      <Layout>
           <Component {...pageProps} />
-        </Layout>
 
         <style jsx global>
           {`
@@ -41,7 +39,7 @@ class MyApp extends App {
             }
           `}
         </style>
-      </Container>
+      </Layout>
     );
   }
 }

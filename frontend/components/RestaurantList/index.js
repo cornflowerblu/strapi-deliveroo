@@ -40,7 +40,7 @@ const RestaurantList = (
                   src={`http://localhost:1337${res.image.url}`}
                 />
                 <CardBody>
-                  <CardTitle>{res.name}</CardTitle>
+                  <CardTitle><h3>{res.name}</h3></CardTitle>
                   <CardText>{res.description}</CardText>
                 </CardBody>
                 <div className="card-footer">
@@ -83,7 +83,7 @@ const RestaurantList = (
 
 const query = gql`
   {
-    restaurants {
+    restaurants(sort:"id") {
       id
       name
       description

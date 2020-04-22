@@ -1,4 +1,5 @@
 import RestaurantList from "../components/RestaurantList";
+import defaultPage from "../hocs/defaultPage";
 import React from "react";
 
 import {
@@ -51,4 +52,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default defaultPage(Index);
